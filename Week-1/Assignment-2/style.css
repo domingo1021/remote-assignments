@@ -1,0 +1,15 @@
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(201, 201, 201);
+}
+
+.left-flex{
+    flex-direction: column;
+    background-color: rgb(251, 201, 201);
+}
+.right-flex{
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: azure;
+}
