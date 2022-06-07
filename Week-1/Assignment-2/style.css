@@ -5,11 +5,16 @@
 }
 
 .left-flex{
+    display:flex;
+    width:50vw;
     flex-direction: column;
     background-color: rgb(251, 201, 201);
 }
 .right-flex{
     display: flex;
+    width: 50vw;
     flex-direction: row-reverse;
-    background-color: azure;
+    background-color:rgb(255, 230, 255);
+    justify-content: end;
+    align-items: right;
 }
