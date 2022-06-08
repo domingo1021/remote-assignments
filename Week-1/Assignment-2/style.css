@@ -2,34 +2,78 @@ body{
     font-family: 'Times New Roman', Times, serif;
     margin:0%;
 }
-#top-nav{
-    display: fixed;
-    width: 100vw;
-    height:40px;
-    background-color: rgb(237, 237, 237);
-}
-#top-nav + #main-content{
-    margin-top:30px;
-}
-#head-title{
-    font-size: 1.25rem;
-    margin-top: auto;
-}
+
 img{
     width: 30px;
     margin-right: 5px;
     position: relative;
     bottom: -4px;
 }
+
+#top-nav{
+    position:fixed;
+    width: 100vw;
+    height:50px;
+    background-color: rgb(237, 237, 237);
+}
+
+#top-nav + #first-content{
+    padding-top:50px;
+}
+
+#head-title{
+    font-size: 1.25rem;
+    margin-top: auto;
+}
+
+#first-content{
+    display: flex;
+    background-color: rgb(208, 229, 253);
+    height: 150px;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+#second-content{
+    text-align: center;
+    margin-left: 10%;
+    margin-right:10%
+}
+
+#content-box{
+    display: flex;
+    margin:auto;
+    /* justify-content: center; */
+    /* align-self: center; */
+    flex-wrap: wrap;
+    flex-direction: row;
+    max-width: 1200px;
+}
+
+#action-btn{
+    background-color: rgb(219, 231, 255);
+    margin-top: 30px;
+    padding: 10px 8px 10px 8px;
+    border: 1px none rgb(255,255,255);
+    border-radius: 5%;
+}
+#action-btn:hover{
+    background-color: rgb(145, 165, 254);
+    cursor:pointer
+}
+
 .flex-container{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    /* margin-top: auto; */
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-top: 8px;
+    padding-left: 30px;
+    padding-right: 50px;
 }
-.flex-container--2{
+
+.flex-container-2{
     display: flex;
     flex-direction: row;
 }
@@ -38,4 +82,17 @@ img{
     display: flex;
     flex-direction: row-reverse;
     margin-top: auto;
-} 
+}
+
+.nav-item{
+    margin-left:15px;
+}
+
+.content-item{
+    background-color:rgb(161, 180, 201);
+    flex-grow:1;
+    flex-basis:40%;
+    height:100px;
+    margin: 1%;
+    padding-top: 10px;
+}
