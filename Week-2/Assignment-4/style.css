@@ -42,7 +42,7 @@ img{
     margin-right:10%
 }
 
-#content-box{
+.content-box{
     display: flex;
     margin:auto;
     /* justify-content: center; */
