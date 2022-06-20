@@ -23,18 +23,21 @@ function binarySearchPosition_2(numbers, target){
     // Second edition, search by loop.
     let start = 0 ;
     let end = numbers.length - 1;
-    while(start != end){
-        let mid = Math.floor((start + end) / 2);
-        if(numbers[mid] === target){
-            return mid;
-        }else if(numbers[mid] < target){
-            start = mid + 1;
+    while(numbers[start]!==target){
+        if (start === end){
+            return -1;
         }else{
-            end = mid - 1;
+            let mid = Math.floor((start + end) / 2);
+            if(numbers[mid] === target){
+                return mid;
+            }else if(numbers[mid] < target){
+                start = mid + 1;
+            }else{
+                end = mid;
+            } 
         }
     }
-    return -1
-
+    return start
 }
 
 console.log(binarySearchPosition([1, 2, 5, 6, 7], 1)); // should
@@ -46,3 +49,6 @@ console.log(binarySearchPosition_2([1, 2, 5, 6, 7], 1)); // should
 // print 0
 console.log(binarySearchPosition_2([1, 2, 5, 6, 7], 6)); // should
 // print 3
+console.log(binarySearchPosition_2([1, 2, 5, 6, 7], 7)); // 4
+console.log(binarySearchPosition_2([1, 2, 5, 6, 7], 9)); // -1
+console.log(binarySearchPosition_2([1, 2, 5, 6, 7], -1)); // -1
