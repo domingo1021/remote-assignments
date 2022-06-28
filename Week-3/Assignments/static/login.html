@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyName</title>
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    function sendName() {
+        const name = document.querySelector('input').value;
+        axios.get(`/trackName?name=${name}`)
+            .then((res)=>{
+                if(res.data === 'success'){
+                    location.href = 'http://localhost:3000/myName';
+                }
+            }).catch((error)=>{
+                document.getElementById('msg').innerText = error;
+            })
+    }
+</script>
+<body>
+    <form>
+        <div>
+            <label for="name">輸入名字</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              class="form-input"
+              autocomplete="false"
+            />
+            <button type="button" onclick="sendName()" style="cursor: pointer;">送出</button>
+        </div>
+    </form>
+    <div id="msg"></div>
+</body>
+</html>
