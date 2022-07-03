@@ -1,0 +1,36 @@
+body{
+    text-align: center;
+}
+.general-form
+{
+    display: block;
+    text-align: center;
+}
+label{
+    position: relative;
+    top:2px;
+}
+form{
+    display: inline-block;
+    background-color: rgb(255, 226, 226);
+    height:300px;
+    width:300px;
+    border-radius:10px ;
+}
+#render-btn{
+    display:block;
+    margin-top:20px;
+}
+#sign-in-form{
+    display:none;
+}
+#enroll-msg{
+    color:red;
+}
+#login-msg{
+    color:red;
+}
+
+.form-input{
+    margin:5px;
+}

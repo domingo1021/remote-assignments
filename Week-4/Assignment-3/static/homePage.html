@@ -1,0 +1,87 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-3</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="render-btn">
+    <button id="show-sign-in">登入</button>
+    <button id="show-sign-up">註冊</button>
+  </div>
+  <div>
+      <form id="sign-up-form" >
+      <h3>註冊</h3>
+        <div>
+          <div>
+            <label for="email">輸入信箱：</label>
+            <input
+              type="text"
+              name="email"
+              id="email"
+              class="form-input"
+              autocomplete="false"
+            />
+          </div>
+          <div>
+            <label for="password">輸入密碼：</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              class="form-input"
+              autocomplete="false"
+            />
+          </div>
+          <div>
+            <label for="password">確認密碼：</label>
+            <input
+              type="password"
+              name="password"
+              id="re-password"
+              class="form-input"
+              autocomplete="false"
+            />
+          </div>
+          <p id="enroll-msg"></p>
+            <button id="sign-up-btn" type="button" style="cursor: pointer;">送出</button>
+        </div>
+    </form>
+  </div>
+  
+  <div>
+    <form id="sign-in-form"">
+      <h3> 登入 </h3>
+      <div>
+        <div>
+          <label for="email">輸入信箱</label>
+          <input
+            type="text"
+            name="email"
+            id="login-in-email"
+            class="form-input"
+            autocomplete="false"
+          />
+        </div>
+        <div>
+          <label for="password">輸入密碼</label>
+          <input
+            type="password"
+            name="password"
+            id="login-in-password"
+            class="form-input"
+            autocomplete="false"
+          />
+        </div>
+        <div id="login-msg"></div>
+          <button id="sign-in-btn" type="button" style="cursor: pointer;">送出</button>
+      </div>
+    </form>
+  </div>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./front_end.js"></script>
+</html>
