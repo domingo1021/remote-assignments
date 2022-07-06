@@ -36,6 +36,7 @@ signUpSubmit.addEventListener("click", async () => {
             });
         if (response.success) {
             // document.querySelector("#enroll-msg").innerText = "註冊成功";
+            document.cookie = `email=${inputEmail}`;
             location.href = "http://localhost:3000/memberPage.html";
         } else {
             document.querySelector("#enroll-msg").innerText = response.msg;
@@ -64,6 +65,7 @@ signInSubmit.addEventListener("click", async () => {
         });
     if (response.success) {
         // document.querySelector("#login-msg").innerText = "登入成功";
+        document.cookie = `email=${inputEmail}`;
         location.href = "http://localhost:3000/memberPage.html";
     } else {
         document.querySelector("#login-msg").innerText = response.msg;

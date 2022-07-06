@@ -6,7 +6,17 @@
     <title>Document</title>
 </head>
 <body>
-    <h3>歡迎加入！ &nbsp;</h3>
+    <h3 id="hello">歡迎加入！ &nbsp;</h3>
     
 </body>
+<script>
+    let cookie = decodeURIComponent(document.cookie)
+    let email_part = cookie.split(";")[0];
+    let email = email_part.substring(cookie.indexOf("email=")+6, email_part.length);
+    if(this.document.cookie === ""){
+        document.querySelector("body").innerHTML = `<h3>尚未註冊/登入</h3>`
+    }else{
+        document.querySelector("#hello").innerText += email;
+    }
+</script>
 </html>
